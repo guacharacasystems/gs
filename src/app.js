@@ -1,11 +1,13 @@
-var newTrack = require('./eventListeners/new_track');
-var configBlock = require('./eventListeners/config_block');
-var transport = require('./eventListeners/transport');
-var sessions = require('./eventListeners/sessions');
+const newTrack          = require('./eventListeners/new_track');
+const configBlock       = require('./eventListeners/config_block');
+const transport         = require('./eventListeners/transport');
+const sessions          = require('./eventListeners/sessions');
+const reducer           = require('./reducer/reducer');
+const renderDOM         = require('./render_methods/render_DOM');
+var store               = require('./store/store');
 
 const init = () => {  //initializes the entire application...
 
-    console.log('JS Started!');
     newTrack.startListening();
     //configBlock.startListening();
     //transport.startListening();
@@ -22,8 +24,17 @@ window.addEventListener('load', init);
 //THIS LISTENS FOR ACTIONS
 
 document.addEventListener( 'action', (event) => {
-    console.log('Got event', event.detail);
-    //store = reducer(store, e.detail); //update the store before rendering
-    //console.log('STORE: ', store);
-    //document.dispatchEvent(new CustomEvent('state', { detail: e.detail }));
+    
+    store = reducer( store, event.detail );     //update the store before rendering
+    console.log('STORE: ', store);              //log the updated state
+    
+    document.dispatchEvent( 
+        new CustomEvent( 'state-change', { detail: event.detail.type })
+    );
+
 }, false );
+
+//THIS LISTENS FOR STATE CHANGES
+document.addEventListener('state-change', function(event){
+    renderDOM(event.detail, store);                           //render the DOM based on the application state
+});

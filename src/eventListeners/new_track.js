@@ -20,10 +20,16 @@ const clickHandler = (event)=> { //For handling "new block" clicks only!
     
     var buttonClicked = event.target;
     var trackNumber = buttonClicked.getAttribute('track-number');
+    
+    var payload = {
+        track : trackNumber,
+        block : { sample: ''} //This will be an instance of the Block Class
+    }
+    
     console.log('Add a new block to track: ', trackNumber );
     
     document.dispatchEvent(
-        new CustomEvent( 'action', { detail: actions.add_new(trackNumber) })
+        new CustomEvent( 'action', { detail: actions.add_new(payload) })
     );
 
     return null;

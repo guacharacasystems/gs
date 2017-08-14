@@ -1,19 +1,16 @@
 var store = {
     
     t1 : {
-
+        blocks : []
     },
     t2 : {
-        
+        blocks : []
     },
     t3 : {
-        
+        blocks : []
     },
     t4 : {
-        
-    },
-    sidebar:{
-
+        blocks : []
     }
 }
 
