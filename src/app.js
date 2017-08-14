@@ -1,20 +1,15 @@
-var eventListeners = require('./eventListeners/new_track');
-//var eventListeners = require('./eventListeners/new_tracks');
-//var eventListeners = require('./eventListeners/new_tracks');
-//var eventListeners = require('./eventListeners/new_tracks');
-//var eventListeners = require('./eventListeners/new_tracks');
-//var eventListeners = require('./eventListeners/new_tracks');
-//var eventListeners = require('./eventListeners/new_tracks');
-//var eventListeners = require('./eventListeners/new_tracks');
+var newTrack = require('./eventListeners/new_track');
+var configBlock = require('./eventListeners/config_block');
 
-
-const init = ()=>{
+const init = () => {
 
     console.log('JS Started!');
-    eventListeners.startListening();
-
-
+    newTrack.startListening();
+    configBlock.startListening();
 
 }
 
+
+
+// THIS IS WHAT  RUNS...
 window.addEventListener('load', init);
