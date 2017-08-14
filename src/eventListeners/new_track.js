@@ -19,7 +19,7 @@ const startListening = () => {
 const clickHandler = (event)=> { //For handling "new block" clicks only!
     
     var buttonClicked = event.target;
-    var trackNumber = buttonClicked.attr('track-number');
+    var trackNumber = buttonClicked.getAttribute('track-number');
     console.log('Add a new block to track: ', trackNumber );
     
     document.dispatchEvent(

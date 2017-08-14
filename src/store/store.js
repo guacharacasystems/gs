@@ -1,4 +1,5 @@
 var store = {
+    
     t1 : {
 
     },
@@ -17,13 +18,6 @@ var store = {
 }
 
 module.exports = store;
-
-document.addEventListener( 'action', (event) => {
-    console.log('Got event', event);
-    //store = reducer(store, e.detail); //update the store before rendering
-    //console.log('STORE: ', store);
-    //document.dispatchEvent(new CustomEvent('state', { detail: e.detail }));
-}, false );
 
 // subscribe a state change handler
 // document.addEventListener('state', function(e){

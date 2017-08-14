@@ -2,10 +2,10 @@
 const ADD_NEW = 'ADD_NEW';
 
 //ADD NEW TRACK
-const add_new = (data) => {
+const add_new = (trackNumber) => {
     return {
         action: ADD_NEW,
-        payload: data
+        payload: trackNumber
     }
 }
 
