@@ -84,11 +84,11 @@ const init = () => {  //initializes the entire application...
 
 }
 
-/////////////////...THIS IS WHAT RUNS FIRST...//////////////////// 
+//THIS IS WHAT RUNS FIRST
 
 window.addEventListener('load', init);
 
-////////////////...THIS LISTENS FOR ACTIONS...////////////////////
+//THIS LISTENS FOR ACTIONS
 
 document.addEventListener( 'action', (event) => {
     console.log('Got event', event.detail);
