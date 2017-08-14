@@ -1,26 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  
+
   <link rel="stylesheet" href="styles/0_main.css">
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"> <!--TO SERVE OURSELVES-->
   <link rel="stylesheet" href="assets/ionicons-2.0.1/css/ionicons.css">
-  
+
   <title>Guacharaca Systems</title>
 
 </head>
 <body>
   <div class="container">
-    
+
     <!--+++++++++++++++++SIDEBAR++++++++++++++++-->
-    
+
     <div id="sidebar">
-      <div class="nav-links">
-        <div class="link">
+      <div class="sidebar-content">
+        <div class="sidebar-title">
           <p>Guacharaca Systems</p>
+        </div>
+        <div class="music-note-controls">
+          <i class="music-note ion-ios-musical-notes"></i>
+          <i class="music-note ion-ios-musical-notes"></i>
+          <i class="music-note ion-ios-musical-notes"></i>
+        </div>
+        <div class="sidebar-links">
+          <a href="#"><p>Log In</p></a>
+    <!--  <p>Log Out</p>  -only visible if user logged in -->
+          <a href="#"><p>Save</p></a>
+          <a href="#"><p>Load</p></a>
+        </div>
+        <div class="transport">
+          <i class="transport-controls ion-ios-play"></i>
+          <i class="transport-controls ion-stop"></i>
+          <i class="transport-controls ion-ios-pause"></i>
+        </div>
+        <div class="transport">
+          <i class="transport-controls ion-ios-rewind"></i>
+          <i class="transport-controls ion-ios-fastforward"></i>
+          <i class="transport-controls ion-record"></i>
         </div>
       </div>
     </div>
@@ -28,8 +49,8 @@
     <!--++++++++++++++++++CONTENT++++++++++++++++++-->
 
     <div id="content">
-      
-          
+
+
             <!--+++++++++++++++TRACK+++++++++++++++-->
 
             <div id= "t1" class="track">
@@ -38,70 +59,69 @@
                   Track Name
                 </div>
                 <div class="buttons">
-                  <i id="t1_add" track-number="1" class="icon ion-ios-plus-outline"></i>
+                  <i id="t1_add" track-number="1" class="add-track-icon ion-ios-plus"></i>
                 </div>
-                
               </div>
               <!--<div class="pad">Beat 1</div>
               <div class="pad">Beat 2</div>
               <div class="pad">Beat 3</div>
               <div class="pad">Beat 4</div>-->
             </div>
-            
+
             <!--+++++++++++++++TRACK+++++++++++++++-->
-            
+
             <div class="track">
               <div class="controls">
                 <div class="track-name">
                   Track Name
                 </div>
                 <div class="buttons">
-                  <i id="t2_add" track-number="2" class="icon ion-ios-plus-outline"></i>
+                  <i id="t2_add" track-number="2" class="add-track-icon ion-ios-plus"></i>
                 </div>
-                
+
               </div>
               <div class="pad">Beat 1</div>
               <div class="pad">Beat 2</div>
               <div class="pad">Beat 3</div>
               <div class="pad">Beat 4</div>
             </div>
-            
+
             <!--+++++++++++++++TRACK+++++++++++++++-->
-            
+
             <div class="track">
               <div class="controls">
                 <div class="track-name">
                   Track Name
                 </div>
                 <div class="buttons">
-                  <i id="t3_add" track-number="3" class="icon ion-ios-plus-outline"></i>
+                  <i id="t3_add" track-number="3" class="add-track-icon ion-ios-plus"></i>
                 </div>
-                
+
               </div>
               <div class="pad">Beat 1</div>
               <div class="pad">Beat 2</div>
               <div class="pad">Beat 3</div>
               <div class="pad">Beat 4</div>
             </div>
-            
+
             <!--+++++++++++++++TRACK+++++++++++++++-->
-            
+
             <div class="track">
               <div class="controls">
                 <div class="track-name">
                   Track Name
                 </div>
                 <div class="buttons">
-                  <i id="t4_add" track-number="4" class="icon ion-ios-plus-outline"></i>
+                  <i id="t4_add" track-number="4" class="add-track-icon ion-ios-plus"></i>
                 </div>
-                
-              </div> 
+
+              </div>
               <div class="pad">Beat 1</div>
               <div class="pad">Beat 2</div>
               <div class="pad">Beat 3</div>
               <div class="pad">Beat 4</div>
             </div>
-    
+
     </div>
 </div>
 <script src="bin/bundle.js"></script>
